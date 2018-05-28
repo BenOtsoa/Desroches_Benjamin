@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import MyTimer from "./MyTimer";
+import SignUp from "./SignUp";
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <MyTimer />
+        <SignUp />
       </div>
     );
   }
