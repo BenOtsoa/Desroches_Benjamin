@@ -9,7 +9,7 @@ class AboutController {
    * @param {*} res
    */
   about(req, res) {
-    res.render("pages/about");
+    db.Users.findAll().then(users => res.render("pages/about", { users }));
   }
 }
 

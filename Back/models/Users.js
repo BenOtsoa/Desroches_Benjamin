@@ -2,6 +2,16 @@ const Users = (sequelize, DataTypes) => {
   var Users = sequelize.define(
     "Users",
     {
+      name: {
+        type: DataTypes.STRING,
+        notEmpty: true,
+        validate: {
+          len: {
+            args: 3,
+            msg: "Name must be atleast 3 characters in length"
+          }
+        }
+      },
       email: {
         type: DataTypes.STRING,
         unique: true,
@@ -18,33 +28,6 @@ const Users = (sequelize, DataTypes) => {
       password: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-
-      name: {
-        type: DataTypes.STRING,
-        notEmpty: true,
-        validate: {
-          len: {
-            args: 3,
-            msg: "Name must be atleast 3 characters in length"
-          }
-        }
-      },
-
-      lastname: {
-        type: DataTypes.STRING,
-        notEmpty: true,
-        validate: {
-          len: {
-            args: 3,
-            msg: "Name must be atleast 3 characters in length"
-          }
-        }
-      },
-
-      active: {
-        type: DataTypes.INTEGER,
-        defaultValue: 1
       }
     },
     {
