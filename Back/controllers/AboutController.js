@@ -11,6 +11,10 @@ class AboutController {
   about(req, res) {
     db.Users.findAll().then(users => res.render("pages/about", { users }));
   }
+
+  signup(req, res) {
+    db.Users.findAll().then(users => res.render("pages/about", { users }));
+  }
 }
 
 module.exports = AboutController;

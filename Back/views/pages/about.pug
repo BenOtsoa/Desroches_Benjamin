@@ -4,3 +4,19 @@ block content
     p Bonjour Tout le monde Hello blala
         each user in users
             p=user.email
+    form
+        .form-group
+        label(for='exampleInputEmail1') Email address
+        input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email', name='email')
+        small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+        .form-group
+        label(for='exampleInputPassword1') Password
+        input#exampleInputPassword1.form-control(type='password', placeholder='Password', name='password')
+        .form-group
+        label(for='firstname') Firstname
+        input#firstname.form-control(type='text', placeholder='Firstname', name='firstname')
+        .form-group
+        label(for='lastname') Lastname
+        input#lastname.form-control(type='text', placeholder='Lastname', name='lastname')
+       
+        button.btn.btn-primary(type='submit') Submit
