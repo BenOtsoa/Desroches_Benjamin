@@ -19,7 +19,7 @@ class AboutController {
     db.Users.create(datas).then(user => {
       console.log("object");
       console.log(datas);
-      res.send("bravo");
+      res.send("Tout est envoyé vers la bdd");
     });
   }
 }

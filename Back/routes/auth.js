@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   controller.auth(req, res);
 });
 
-router.post("/", (req, res) => {
+router.post("/signup", (req, res) => {
   console.log("je suis dans le post");
   controller.signup(req, res);
 });
