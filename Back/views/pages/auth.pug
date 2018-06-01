@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    p Bonjour Tout le monde Hello blala
+        each user in users
+            p=user.email
+    form.form-group(method="POST", action=`/auth/`)
+        label(for='email') Email address
+        input#email.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email', name='email')
+        .form-group
+            label(for='password') Password
+            input#password.form-control(type='password', placeholder='Password', name='password')
+        .form-group
+            label(for='firstname') Firstname
+            input#firstname.form-control(type='text', placeholder='Firstname', name='firstname')
+        .form-group
+            label(for='lastname') Lastname
+            input#lastname.form-control(type='text', placeholder='Lastname', name='lastname')
+        button.btn.btn-primary(type='submit') Submit
